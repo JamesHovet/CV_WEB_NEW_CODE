@@ -14,7 +14,8 @@ thecirclevoice.org css
  HOME PAGE AND GENERAL SECTION
 ==================================================================================================*/
 
-/* The header is a negative image, and the bacground color is what shows through, changing the background image changes the color of the header */
+/* The header is a negative image, and the bacground color is what shows through,
+ changing the background image changes the color of the header */
 img.headerimage {
 	background-color: black;
 }
