@@ -1,0 +1,229 @@
+/*
+thecirclevoice.org css
+
+1. home page and website wide styles
+2. search bar css
+3. category page
+4. staff page
+5. story page
+
+
+*/
+
+/*==================================================================================================
+ HOME PAGE AND GENERAL SECTION
+==================================================================================================*/
+
+/* The header is a negative image, and the bacground color is what shows through, changing the background image changes the color of the header */
+img.headerimage {
+	background-color: black;
+}
+
+img.headerimage:hover {
+	background-color: #8C1217;
+}
+
+#footer .social-border:hover {
+	color: #8C1217;
+	background: #FFFFFF;
+}
+
+#subnavbar li a {
+	margin-right: 7px !important;
+	margin-left: 7px !important;
+}
+
+a h3.homeheadline,
+a.homeheadline,
+a.headline,
+#content h1 a,
+.storyheadline,
+.searchheadline,
+.maingridheadline {
+	font-style: italic;
+	font-weight: bolder !important;
+}
+
+a:hover {
+	color: #8C1217 !important;
+}
+
+div div a:hover {
+	color: #8C1217 !important;
+}
+
+h3 a:hover,
+ul li a:hover {
+	color: #8C1217 !important;
+}
+
+.desc a:hover {
+	color: #fff !important;
+}
+
+.sf-menu li li a {
+	border-top-color: black;
+	margin-left: 0px;
+	margin-right: 0px;
+
+}
+
+/*==================================================================================================
+Search stuff
+==================================================================================================*/
+div.searchDiv {
+	overflow: hidden;
+	width: 100%;
+}
+
+input#s2 {
+/*margin-top: 5px;*/
+/*margin-bottom: 5px;*/
+	padding-left: 22px;
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+	width: 100%;
+/*height: 22px;*/
+	border: none;
+	border-bottom: black solid 1px;
+	background: none;
+	color: black;
+	font-family: "Georgia";
+	font-size: 15px;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	animation-name: searchSlideIn;
+	animation-duration: .5s;
+	animation-timing-function: ease-out;
+/*webkitAnimationPlayState: "paused";*/
+}
+
+@keyframes searchSlideIn {
+	from {
+		height: 0;
+		padding-top: 0 !important;
+		padding-bottom: : 0 !important;
+	/*margin-top: 0px;*/
+	/*margin-bottom: 0px;*/
+	}
+
+	to {
+		height: 22px;
+		padding-top: 8px !important;
+		padding-bottom: : 8px !important;
+	/*margin-top: 5px;*/
+	/*margin-bottom: 5px;*/
+	}
+}
+
+/*widget style 1 disables the images */
+.widgetbody1 .catboxthumbnail {
+	display: none;
+}
+
+h4.widget6 a,
+h4.widget6 {
+	font-weight: bold !important;
+	font-size: 30px !important;
+}
+
+div div h4.widget6 a,
+div div h4.widget6 {
+	font-weight: bold !important;
+	font-size: 30px !important;
+}
+
+/* STORY PAGE SECTION  */
+.storymeta {
+	background-color: #fff;
+	border-top: 1px solid #000 !important;
+}
+
+.sharing-top {
+	display: none;
+}
+
+h1#storyheadline {
+	font-size: 4.6em !important;
+}
+
+/*==================================================================================================
+Category Page
+==================================================================================================*/
+
+div#sidebar {
+	display: none;
+}
+
+div#contentleft {
+	
+}
+
+/*==================================================================================================
+Staff Page
+==================================================================================================*/
+
+div.profilepreviewbox p.staffposition {
+	text-align: center;
+	font-size: 17px !important;
+}
+
+h3.staffmembername a {
+	font-weight: bold;
+}
+/*==================================================================================================
+Story Page
+==================================================================================================*/
+#storypage div.permalinkphotobox {
+    width: 100%;
+    margin: 0px auto 0px auto !important;
+    max-width: none;
+    float: none;
+}
+
+#storypage img.catboxphoto{
+	height: auto !important;
+	width: auto !important;
+	max-height: 600px;
+	max-width: 100% !important;
+
+
+	margin-left: auto !important;
+	margin-right: auto !important;
+	display: block !important;
+}
+
+.photowrap {
+	/*max-width: none !important;*/
+	max-height: none !important;
+}
+
+#storypage div.wp-caption {
+	background-color: white !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+
+	margin-left: auto !important;
+	margin-right: auto !important;
+
+	display: block;
+}
+
+
+/*Drop Cap: the direct child p of the postarea div, then the first of type and first letter get bigger*/
+div.postarea > p#graph1:first-of-type::first-letter {
+	font-size: 90px;
+	line-height: 80px;
+	float: left;
+
+	color: #8C1217;
+	padding-right: 4px;
+}
+
+#storypage #contentleft p {
+	color: black
+}
+
+div.storyshadow {
+	margin-bottom: 25px;
+}

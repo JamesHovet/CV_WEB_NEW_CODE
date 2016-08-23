@@ -1,0 +1,79 @@
+<script>
+
+    /*
+    so, basically, this code grabs the search text from the menu and saves it as an element, it then creates the div to be added to the page programatically step by step and and then readies it to be added to the page
+
+    an event listener gets added to the search text with a function that adds the div to the page. the css handles all the animation and all the positioning.
+    */
+
+    var anchor = document.getElementsByClassName("searchTarget")[0].children[0];
+
+    var parentDiv = document.getElementsByClassName("bottom-menu")[0].nextSibling
+
+    parentDiv.className += " parentDiv";
+
+    var searchDiv = document.createElement("div");
+    searchDiv.className += " searchDiv";
+
+    var searchForm = document.createElement("form");
+    searchForm.setAttribute('role','search');
+    searchForm.setAttribute('method','get');
+    searchForm.setAttribute('id','newSearchForm');
+    searchForm.setAttribute('action','http://thecirclevoice.org/');
+    searchForm.className += " newSearchForm";
+
+    var searchInput = document.createElement("input");
+    searchInput.setAttribute('type','text');
+    searchInput.setAttribute('id','s2');
+    searchInput.setAttribute('name','s');
+    searchInput.setAttribute('placeholder','Search The Circle Voice:')
+
+    var searchSubmit = document.createElement("input");
+    searchSubmit.setAttribute('type','submit');
+    searchSubmit.setAttribute('id','s');
+    searchSubmit.setAttribute('value','Search');
+    searchSubmit.style.display = "none";
+
+    searchForm.appendChild(searchInput);
+    searchForm.appendChild(searchSubmit);
+
+    searchDiv.appendChild(searchForm);
+
+    // parentDiv.appendChild(searchDiv);
+
+
+    /**
+     * adds searchDiv into the parnet div in the DOM
+    */
+    var childToAdd =
+
+        f = function() {
+
+            parentDiv.appendChild(searchDiv);
+
+        }
+
+    anchor.setAttribute("href","#");
+    anchor.addEventListener("click", f);
+</script>
+
+
+
+<!--
+
+this is reference for the form that I created
+   ||
+   ||
+ \ || /
+  \||/
+   \/
+
+<form role="search" method="get" id="searchform" class="searchform" action="http://thecirclevoice.org/">
+    <div>
+        <label class="screen-reader-text" for="s">Search for:</label>
+        <input type="text" value="" name="s" id="s">
+        <input type="submit" id="searchsubmit" value="Search">
+    </div>
+</form>
+
+-->
