@@ -1,23 +1,14 @@
 <script>
-
-    alert("HELLO");
-    
     var URL = window.location.href;
 
     var isCategory = URL.search("category");
 
-    console.log("did the first thing")
-
     setIsCategoryClass = function setIsCategoryClass() {
         var contentleft = document.getElementById('contentleft');
-        console.log("did the second thing")
         contentleft.setAttribute("class", "categoryDiv")
     }
 
-    if isCategory >= 0 {
+    if (isCategory != -1) {
         setIsCategoryClass();
-        console.log("did the third thing");
     }
-
-
 </script>
