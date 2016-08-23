@@ -1,10 +1,9 @@
 <script>
-
     /*
-    so, basically, this code grabs the search text from the menu and saves it as an element, it then creates the div to be added to the page programatically step by step and and then readies it to be added to the page
+            so, basically, this code grabs the search text from the menu and saves it as an element, it then creates the div to be added to the page programatically step by step and and then readies it to be added to the page
 
-    an event listener gets added to the search text with a function that adds the div to the page. the css handles all the animation and all the positioning.
-    */
+            an event listener gets added to the search text with a function that adds the div to the page. the css handles all the animation and all the positioning.
+            */
 
     var anchor = document.getElementsByClassName("searchTarget")[0].children[0];
 
@@ -16,22 +15,22 @@
     searchDiv.className += " searchDiv";
 
     var searchForm = document.createElement("form");
-    searchForm.setAttribute('role','search');
-    searchForm.setAttribute('method','get');
-    searchForm.setAttribute('id','newSearchForm');
-    searchForm.setAttribute('action','http://thecirclevoice.org/');
+    searchForm.setAttribute('role', 'search');
+    searchForm.setAttribute('method', 'get');
+    searchForm.setAttribute('id', 'newSearchForm');
+    searchForm.setAttribute('action', 'http://thecirclevoice.org/');
     searchForm.className += " newSearchForm";
 
     var searchInput = document.createElement("input");
-    searchInput.setAttribute('type','text');
-    searchInput.setAttribute('id','s2');
-    searchInput.setAttribute('name','s');
-    searchInput.setAttribute('placeholder','Search The Circle Voice:')
+    searchInput.setAttribute('type', 'text');
+    searchInput.setAttribute('id', 's2');
+    searchInput.setAttribute('name', 's');
+    searchInput.setAttribute('placeholder', 'Search The Circle Voice:')
 
     var searchSubmit = document.createElement("input");
-    searchSubmit.setAttribute('type','submit');
-    searchSubmit.setAttribute('id','s');
-    searchSubmit.setAttribute('value','Search');
+    searchSubmit.setAttribute('type', 'submit');
+    searchSubmit.setAttribute('id', 's');
+    searchSubmit.setAttribute('value', 'Search');
     searchSubmit.style.display = "none";
 
     searchForm.appendChild(searchInput);
@@ -44,7 +43,7 @@
 
     /**
      * adds searchDiv into the parnet div in the DOM
-    */
+     */
     var childToAdd =
 
         f = function() {
@@ -53,8 +52,25 @@
 
         }
 
-    anchor.setAttribute("href","#");
+    anchor.setAttribute("href", "#");
     anchor.addEventListener("click", f);
+
+    // ================================================================================================
+    // categoryPageDetection
+    // ================================================================================================
+
+    var URL = window.location.href;
+
+    var isCategory = URL.search("category");
+
+    setIsCategoryClass = function setIsCategoryClass() {
+        var contentleft = document.getElementById('contentleft');
+        contentleft.setAttribute("class", "categoryDiv")
+    }
+
+    if (isCategory != -1) {
+        setIsCategoryClass();
+    }
 </script>
 
 
