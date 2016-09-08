@@ -1,5 +1,8 @@
 <script>
     /*
+            © James Hovet 2016
+
+
             so, basically, this code grabs the search text from the menu and saves it as an element, it then creates the div to be added to the page programatically step by step and and then readies it to be added to the page
 
             an event listener gets added to the search text with a function that adds the div to the page. the css handles all the animation and all the positioning.
@@ -55,24 +58,44 @@
     anchor.setAttribute("href", "#");
     anchor.addEventListener("click", f);
 
-    // ================================================================================================
+
+    //==============================================================================================
     // categoryPageDetection
-    // ================================================================================================
+    //==============================================================================================
 
     var URL = window.location.href;
 
     var isCategory = URL.search("category");
+    var isSearch = URL.search("/?s="); // the ? is escaped because regex
 
+    var isHOG = URL.search("hog");
     setIsCategoryClass = function setIsCategoryClass() {
         var contentleft = document.getElementById('contentleft');
         contentleft.setAttribute("class", "categoryDiv")
         var sidebar = document.getElementById('sidebar');
         sidebar.setAttribute("class", "hiddenSidebar");
+        //console.log("is Category")
     }
 
-    if (isCategory != -1) {
+    setIsHOGClass = function setIsHOGClass() {
+        var contentleft = document.getElementById('contentleft');
+        contentleft.setAttribute("class","categoryDiv hog")
+        //console.log("Is HOG");
+    }
+
+    if (isCategory != -1 || isSearch != -1) {
         setIsCategoryClass();
     }
+    if (isHOG != -1){
+        setIsHOGClass();
+    }
+
+    // CLOSE THE COMMENT SECTION BY DEFAULT
+    setTimeout(function () {
+        document.getElementById("collapse").click();
+    }, 3000);
+
+
 </script>
 
 
