@@ -12,7 +12,12 @@ thecirclevoice.org css
 
 GROTON COLOR: #8C1217
 
+
+copy hosted at:
+https://github.com/JamesHovet/CV_WEB_NEW_CODE
+
 */
+
 
 
 /*==================================================================================================
@@ -71,6 +76,12 @@ ul li a:hover {
 
 div.trending-number {
 	color: black;
+}
+
+div#homepageleft img.catboxphoto {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
 }
 
 /*==================================================================================================
