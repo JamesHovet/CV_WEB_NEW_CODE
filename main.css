@@ -19,7 +19,6 @@ https://github.com/JamesHovet/CV_WEB_NEW_CODE
 */
 
 
-
 /*==================================================================================================
  HOME PAGE AND GENERAL SECTION
 ==================================================================================================*/
@@ -73,11 +72,9 @@ ul li a:hover {
     margin-left: 0px;
     margin-right: 0px;
 }
-
 div.trending-number {
-	color: black;
+    color: black;
 }
-
 div#homepageleft img.catboxphoto {
     width: auto !important;
     height: auto !important;
@@ -184,15 +181,12 @@ div#contentleft.categoryDiv div {
     font-size: 1.55em !important;
     line-height: 1.5em !important;
 }
-
 #content #contentleft .categoryDiv h1.searchheadline a:hover {
-	color: #8C1217 !important;
+    color: #8C1217 !important;
 }
-
 #content h1 a:hover {
-	color: #8C1217;
+    color: #8C1217;
 }
-
 .categoryDiv div.searchheadline {
     margin-bottom: 0px;
     padding-bottom: 15px;
@@ -204,8 +198,17 @@ div#contentleft.categoryDiv div {
 .searchresult-profile .profile {
     max-width: 99%;
 }
-
-
+@media only screen and (max-width: 479px) {
+    .categoryDiv img.categoryimage {
+        height: auto !important;
+        width: auto !important;
+        max-height: 600px;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+    }
+}
 
 /*==================================================================================================
 Staff Page
@@ -253,9 +256,10 @@ Story Page
 
 /*Drop Cap: the direct child p of the postarea div, then the first of type and first letter get bigger*/
 
+
 /*The Tilde is the sibling selector*/
 
-div.postarea> #storyheadline ~ p:first-of-type::first-letter {
+div.postarea>#storyheadline~p:first-of-type::first-letter {
     font-size: 90px;
     line-height: 80px;
     float: left;
@@ -265,15 +269,14 @@ div.postarea> #storyheadline ~ p:first-of-type::first-letter {
 
 /*Overide for HOG pages*/
 
-.hog div.postarea> #storyheadline ~ p:first-of-type::first-letter,
-.hog div.postarea> #storyheadline ~ p {
+.hog div.postarea>#storyheadline~p:first-of-type::first-letter,
+.hog div.postarea>#storyheadline~p {
     font-size: 1em;
     line-height: 2em;
     float: none;
     color: black;
     padding-right: 0px;
 }
-
 #storypage #contentleft p {
     color: black
 }
@@ -301,7 +304,6 @@ div.storyshadow {
 #commentsbox h2 {
     margin-left: 0px;
 }
-
 #storypage #contentleft div.storydeck p {
     font-size: 3.0em !important;
     color: black !important;
@@ -312,8 +314,8 @@ Fun stuff
 ==================================================================================================*/
 
 span#special {
-    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
+    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
